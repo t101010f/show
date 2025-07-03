@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: iptv-proxy
+    env: node
+    rootDir: .
+    buildCommand: npm install
+    startCommand: node proxy-server.js
+    envVars:
+      - key: PORT
+        value: 10000
+    autoDeploy: true 
